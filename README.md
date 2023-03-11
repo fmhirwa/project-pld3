@@ -1,4 +1,4 @@
-Readme file for the pld project.
+Readme file for the pld project as part of the negpod project.
 Business Information Portal website
 
 This is a web application built using Python and SQLite, which allows users to access business information through a web interface. This README file provides instructions on how to set up and use the application.
@@ -66,3 +66,5 @@ If you would like to contribute to the development of this application, please f
 
 License
 This application is licensed under the MIT license. See the LICENSE file for more information.
+
+Contact ALU for inquiry. Refer to Negpod 11, S22 BSE intake
