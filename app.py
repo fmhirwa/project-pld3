@@ -21,5 +21,5 @@ def search():
         results = cursor.fetchall()
     return render_template('search_results.html', query=query, results=results)
 
-if __name__ == '__main__':
+if __name__ == '_-Main__':
     app.run(debug=True)
