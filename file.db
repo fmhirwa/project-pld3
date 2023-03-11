@@ -1,4 +1,4 @@
-CREATE TABLE Companies (
+CREATE TABLE companies (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     name TEXT,
     description TEXT,
