@@ -1,71 +1,30 @@
-Readme file for the pld project as part of the negpod project.
-Business Information Portal website
+# Business Manager
 
-This is a web application built using Python and SQLite, which allows users to access business information through a web interface. This README file provides instructions on how to set up and use the application.
+This program allows the user to manage a list of businesses stored in a JSON file. The user can add, delete and display businesses.
 
-Installation
-Clone the repository to your local machine:
-bash
- 
-```
-git clone https://github.com/fmhirwa/project-pld3.git
-```
-Install the required Python libraries listed in the requirements.txt file:
- 
-```
-pip install -r requirements.txt
-```
-Create a new SQLite database by running the following command in your terminal:
- 
-```
-sqlite3 business_info.db
-```
-Create the required tables by running the following command in the SQLite terminal:
-vbnet
- 
-```
-CREATE TABLE businesses (
-    id INTEGER PRIMARY KEY,
-    name TEXT NOT NULL,
-    description TEXT,
-    address TEXT,
-    phone_number TEXT,
-    website TEXT
-);
-```
-Insert some sample data into the businesses table by running the following commands in the SQLite terminal:
-sql
- 
-```
-INSERT INTO businesses (name, description, address, phone_number, website)
-VALUES ('Business A', 'This is the first business', '123 Main St, Anytown USA', '555-1234', 'https://businessa.com');
+## Usage
 
-INSERT INTO businesses (name, description, address, phone_number, website)
-VALUES ('Business B', 'This is the second business', '456 Elm St, Anytown USA', '555-5678', 'https://businessb.com');
+1. Run the program by typing `python app.py` in the command line.
+2. The program will display a menu with the following options:
+    1. Add a business
+    2. Delete a business
+    3. Display all businesses
+    4. Quit
+3. Enter the number of the option you want to choose and press Enter.
+4. Follow the prompts to add or delete a business or to display all businesses.
+5. To quit the program, choose option 4 from the menu.
 
-INSERT INTO businesses (name, description, address, phone_number, website)
-VALUES ('Business C', 'This is the third business', '789 Oak St, Anytown USA', '555-9012', 'https://businessc.com');
-```
-Update the config.py file with your database information.
-Usage
-To start the web application, run the following command in your terminal:
- 
-```
-python app.py
-```
-Open a web browser and navigate to http://localhost:5000/ to access the web interface.
+## Data Format
 
-You can view a list of all businesses by clicking on the "View All Businesses" link in the navigation menu.
+The businesses are stored in a JSON file named `businesses.json`. The file contains a dictionary where the keys are strings representing the business IDs and the values are dictionaries containing the business information.
 
-To add a new business, click on the "Add a New Business" link in the navigation menu and fill in the form with the required information.
+Each business dictionary has the following keys:
+- `name`: The name of the business.
+- `description`: A description of the business.
+- `location`: The address of the business.
+- `phone`: The phone number of the business.
+- `website`: The website of the business.
 
-To edit or delete an existing business, click on the "View All Businesses" link in the navigation menu and then click on the "Edit" or "Delete" button next to the business you want to modify.
+Here is an example of the contents of the `businesses.json` file:
 
-Contributing
-If you would like to contribute to the development of this application, please fork the repository and submit a pull request.
-
-License
-This application is licensed under the MIT license. See the LICENSE file for more information.
-
-Contact ALU for inquiry. Refer to Negpod 11, S22 BSE intake
-
+{ “1”: { “name”: “ABC Pharmacy”, “location”: “123 Main Street”, “phone”: “555-1234”, “hours”: “9AM-5PM”, “description”: “A pharmacy that offers prescription and over-the-counter medication.” }, “2”: { “name”: “XYZ Restaurant”, “location”: “456 Broadway”, “phone”: “555-5678”, “hours”: “11AM-9PM”, “description”: “A restaurant that serves a variety of cuisines, including Italian and Mexican.” }, “3”: { “name”: “123 Hardware Store”, “location”: “789 Elm Street”, “phone”: “555-9012”, “hours”: “8AM-6PM”, “description”: “A hardware store that offers tools and supplies for DIY projects.” } }
